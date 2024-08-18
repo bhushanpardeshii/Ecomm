@@ -1,11 +1,11 @@
 'use client'
 import Products from '@/components/products'
+import Image from 'next/image'
 import { useParams, useRouter } from 'next/navigation'
 import { React, useState, useEffect } from 'react'
 
 const Product = () => {
     const { id } = useParams()
-    console.log("id", id)
     const [product, setproduct] = useState({});
     const router = useRouter()
     useEffect(() => {
@@ -16,7 +16,7 @@ const Product = () => {
             console.log(data)
         }
         fetchProduct()
-    }, [])
+    },)
     if (!Object.keys(product).length > 0) return <div>Not found </div>
     const handleCart = (product, NavigateToCart) => {
         console.log(product)
@@ -45,7 +45,7 @@ const Product = () => {
         <section className="text-gray-600 body-font overflow-hidden">
             <div className="container px-5 py-24 mx-auto">
                 <div className="lg:w-4/5 mx-auto flex flex-wrap">
-                    <img alt="ecommerce" className="lg:w-1/2 w-full lg:h-96  h-64  object-contain object-center rounded" src={product.image} />
+                    <Image alt="ecommerce" className="lg:w-1/2 w-full lg:h-96  h-64  object-contain object-center rounded" src={product.image} />
                     <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
                         <h2 className="text-sm title-font text-gray-500 tracking-widest uppercase">{product.category}</h2>
                         <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">{product.title}</h1>

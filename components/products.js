@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
 
@@ -14,10 +15,10 @@ const Products = ({ products }) => {
                         products.map((product) => {
                             const { id, title, price, decription, category, image } = product;
                             return (
-                                <Link href={`/product/${id}`}>
+                                <Link href={`/product/${id}`} key={id}>
                                     <div class="p-4 hover:shadow-lg rounded-lg cursor-pointer">
                                         <a class="block relative h-48 rounded overflow-hidden">
-                                            <img alt={product.title} class="object-contain  object-center w-full h-full block" src={product.image} />
+                                            <Image alt={product.title} class="object-contain  object-center w-full h-full block" src={product.image} />
                                         </a>
                                         <div class="mt-4 ">
                                             <h3 class="text-gray-500 flex justify-center text-xs tracking-widest title-font mb-1 uppercase">{product.category}</h3>
