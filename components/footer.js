@@ -87,7 +87,7 @@ const Footer = () => {
             <div >
                 <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
                     <p class="text-white text-sm text-center sm:text-left">© 2024 Ecomm —
-                        <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" class="text-white ml-1" target="_blank">@bhushanpardeshii</a>
+                        <a href="https://github.com/bhushanpardeshii/Ecomm" rel="noopener noreferrer" class="text-white ml-1" target="_blank">@bhushanpardeshii</a>
                     </p>
                     <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
                         <a class="text-white-500">
